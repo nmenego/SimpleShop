@@ -1,7 +1,2 @@
-/.settings/*
-/.idea/*
-/target/*
-FeatherAssets.iml
-.springBeans
-.project
-.classpath
+.idea/
+target/

@@ -1,7 +1,25 @@
 package com.simpleshop.form;
 
 /**
- * Created by nmenego on 10/20/16.
+ * POJO to represent our form.
  */
 public class OrderForm {
+    private int itemACount;
+    private int itemBCount;
+
+    public int getItemACount() {
+        return itemACount;
+    }
+
+    public void setItemACount(int itemACount) {
+        this.itemACount = itemACount;
+    }
+
+    public int getItemBCount() {
+        return itemBCount;
+    }
+
+    public void setItemBCount(int itemBCount) {
+        this.itemBCount = itemBCount;
+    }
 }

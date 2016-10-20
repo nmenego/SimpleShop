@@ -1,12 +1,21 @@
-package com.simpleshop.model;
+package com.simpleshop.entity;
 
 /**
- * Created by nmenego on 10/20/16.
+ * Entity to represent our Inventory.
  */
 public class Inventory {
     private int itemId;
     private String itemName;
     private int count;
+
+    public Inventory() {
+    }
+
+    public Inventory(int itemId, String itemName, int count) {
+        this.itemId = itemId;
+        this.itemName = itemName;
+        this.count = count;
+    }
 
     public int getItemId() {
         return itemId;
