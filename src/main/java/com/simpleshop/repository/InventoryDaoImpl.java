@@ -15,6 +15,11 @@ public class InventoryDaoImpl implements InventoryDao {
     private static Inventory itemB;
 
     public InventoryDaoImpl() {
+        reset();
+    }
+
+    // to reset the app..
+    public void reset() {
         itemA = new Inventory(1, "Item A", 20);
         itemB = new Inventory(2, "Item B", 10);
     }

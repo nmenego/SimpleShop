@@ -37,8 +37,6 @@ public class ShopController {
      */
     @RequestMapping(value = "/buy", method = RequestMethod.POST)
     public String buy(@ModelAttribute("orderForm") OrderForm orderForm, Model model) {
-
-
         try {
             List<Inventory> inventoryList = inventoryService.executeOrder(orderForm);
             model.addAttribute("inventory", inventoryList);
@@ -46,6 +44,19 @@ public class ShopController {
             model.addAttribute("error", e.getMessage());
             model.addAttribute("inventory", inventoryService.getInventoryList());
         }
+        return "home";
+    }
+
+    /**
+     * Resets the app
+     * @param model
+     * @return
+     */
+    @RequestMapping(value = "/reset", method = RequestMethod.GET)
+    public String reset(Model model) {
+        inventoryService.reset();
+        model.addAttribute("orderForm", new OrderForm());
+        model.addAttribute("inventory", inventoryService.getInventoryList());
         return "home";
     }
 

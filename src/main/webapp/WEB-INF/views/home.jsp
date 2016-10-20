@@ -87,5 +87,7 @@
     </table>
 </form:form>
 
+<a href="<spring:url value="/reset"/>">Reset</a>
+
 </body>
 </html>

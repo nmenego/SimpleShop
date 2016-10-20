@@ -16,6 +16,17 @@ public interface InventoryService {
      */
     List<Inventory> getInventoryList();
 
+    /**
+     * Executes an order using an OrderForm.
+     * @param orderForm
+     * @return
+     * @throws Exception
+     */
     List<Inventory> executeOrder(OrderForm orderForm) throws Exception;
+
+    /**
+     * Resets the data.
+     */
+    void reset();
 
 }
